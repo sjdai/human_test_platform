@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" href="{{ url_for('static', filename='image/logo.png')}}" />
+  <!-- Site Properties -->
+  <title>中研院假新聞辨認實驗</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/reset.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/site.css') }}">
+      
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/container.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/grid.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/header.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/image.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/menu.css') }}">
+                     
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/divider.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/segment.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/form.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/input.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/button.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/list.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/message.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/icon.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/progress.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/sidebar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/transition.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/label.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/card.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/rail.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/sticky.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/item.css') }}">
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/sidebar.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/transition.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/visibility.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/sticky.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/progress.js') }}"></script>
+</head>
+<body>
+
+<div class="ui top attached menu inverted">
+	<a class="header item">中研院假新聞辨認實驗</a>
+	<div class="ui dropdown icon item button">
+  			<img class="ui right spaced avatar image" src="{{ url_for('static', filename='image/user.png')}}">
+  			Elliot
+  </div>
+  
+  <a class="active red item right">
+    離開
+  </a>
+</div>
+
+<div class="main ui container">
+	<div class="ui hidden divider"></div>
+	<div class="ui active teal progress" id="exp_progress">
+	  <div class="bar">
+	    <div class="progress"></div>
+	  </div>
+	  <div class="label">完成進度</div>
+	</div>
+	請觀看以下新聞
+	
+	<div class="ui hidden divider"></div>
+	字體 ： 
+	<div class="ui buttons">
+		<button class="ui button" onclick="augment_font_size()"><i class="icon plus"></i></button>
+  		<button class="ui button" onclick="decrease_font_size()"><i class="icon minus"></i></button>
+  	</div>
+	<div class="ui segment" id="main">
+
+		<div class="ui right dividing rail">
+	    	<div class="ui container">
+	    		<h3 class="ui header">推薦新聞</h3>
+	    		<div class="ui segment">
+	    			<a href="">
+	    				流鼻水、咳痰就不是武漢肺炎？錯誤訊息！
+	    			</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">防疫期間最不該穿「毛線衣」？網傳毛衣易吸附病毒，醫師：這種要命習慣更易釀成防疫漏洞
+</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">武漢肺炎引「假訊息」亂象！用手機有3 招能自保</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">網傳霧霾引發肺炎環保署：舊謠言勿轉傳</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">武漢肺炎》網傳北投榮總確診病患往生？ TFC查證：假訊息</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">吃維他命C、喝大蒜水和紅茶就能抗武漢肺炎？防疫勿聽信偏方！</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">網傳「霧霾」引發肺炎！環保署駁斥：不要再轉傳舊謠言</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">疫情假消息襲來之際，Google、Facebook、Twitter做了什麼？</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">LINE群組亂報確診病例數傳喚到案</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">救救家中長輩群闢謠的網站及LINE@的帳號</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">武漢肺炎「假訊息」頻傳手機3招知真假(圖)</a>
+	    		</div>
+	    		<div class="ui segment">
+	    			<a href="">紅茶.普洱茶可抗武漢肺炎? 食藥署：無科學根據</a>
+	    		</div>
+	    		<div class="ui hidden divider"></div>
+	    	</div>
+	  	</div>
+		<h4>氰化物可防武漢肺炎? 劇毒恐致死</h4>
+		<p id="news_content">綜合報導  / 台北市
+
+為了對抗武漢肺炎病毒，防疫物資被搶購，網路上也出現各種不實的流言，可能會讓民眾誤信導致可怕後果，有一名男子就在網路寫下「氰化物可以殺死武漢肺炎病毒」，這讓政府重申，氰化物是劇毒，服用會危害健康。
+
+一名男子在網路PO文寫下「氰化物可以殺死武漢肺炎病毒，手邊沒有的話，可以把大量蘋果籽磨成粉服用」，這個PO文被檢舉，PO文的人是一名28歲在日本留學的學生。
+
+化學老師張丕白：「其實0點幾克就會致死了，它的毒量非常的稀少就可以把人致死，基本上氰化合物它是劇毒什麼都會殺掉，所以它可以把所有的生物啦，譬如說細菌啦、人啦都會被殺死掉。」
+
+確實蘋果籽含有微量氰化物，吃到一兩顆不會造成危害，但如果是直接服用氰化物，不但會造成人體損害還會害命，指揮中心也緊急發出聲明，強調氰化物屬於劇毒服用將危害健康。
+
+刑事局偵二大隊第三隊隊長趙尚臻：「呼籲民眾切勿散布不實的言論或假消息，我們警方將依社會秩序維護法或傳染病防治法來進行偵辦。」
+
+過去千面人下毒事件用的就是氰化物，而這名PO文的男子散佈謠言，依社維法可罰3萬或拘留3天，還有傳染病防治法最高可罰300萬元，民眾可以上疾管署網站，或者台灣事實查核中心查證，另外其他查證流言的通訊軟體，千萬不要輕信謠言，否則可能還沒防疫就先害到了自己。
+
+為了對抗武漢肺炎病毒，防疫物資被搶購，網路上也出現各種不實的流言，可能會讓民眾誤信導致可怕後果，有一名男子就在網路寫下「氰化物可以殺死武漢肺炎病毒」，這讓政府重申，氰化物是劇毒，服用會危害健康。
+
+一名男子在網路PO文寫下「氰化物可以殺死武漢肺炎病毒，手邊沒有的話，可以把大量蘋果籽磨成粉服用」，這個PO文被檢舉，PO文的人是一名28歲在日本留學的學生。
+
+化學老師張丕白：「其實0點幾克就會致死了，它的毒量非常的稀少就可以把人致死，基本上氰化合物它是劇毒什麼都會殺掉，所以它可以把所有的生物啦，譬如說細菌啦、人啦都會被殺死掉。」
+
+確實蘋果籽含有微量氰化物，吃到一兩顆不會造成危害，但如果是直接服用氰化物，不但會造成人體損害還會害命，指揮中心也緊急發出聲明，強調氰化物屬於劇毒服用將危害健康。
+
+刑事局偵二大隊第三隊隊長趙尚臻：「呼籲民眾切勿散布不實的言論或假消息，我們警方將依社會秩序維護法或傳染病防治法來進行偵辦。」
+
+過去千面人下毒事件用的就是氰化物，而這名PO文的男子散佈謠言，依社維法可罰3萬或拘留3天，還有傳染病防治法最高可罰300萬元，民眾可以上疾管署網站，或者台灣事實查核中心查證，另外其他查證流言的通訊軟體，千萬不要輕信謠言，否則可能還沒防疫就先害</p>
+	</div>
+	<div class="ui form">
+		<div class="inline fields">
+    		<label for="fruit">此篇新聞是否為假新聞</label>
+		    <div class="field">
+		      <div class="ui radio checkbox">
+		        <input type="radio" name="fruit" tabindex="0" class="hidden">
+		        <label>是</label>
+		      </div>
+		    </div>
+		    <div class="field">
+		      <div class="ui radio checkbox">
+		        <input type="radio" name="fruit" tabindex="0" class="hidden">
+		        <label>否</label>
+		      </div>
+		    </div>
+		  </div>
+
+		  <button type="submit" class="ui secondary button">送出</button>
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+	
+$('#exp_progress')
+  .progress({
+    percent: 77
+  })
+;
+</script>
+<script type="text/javascript">
+	function augment_font_size(){
+		var font_size = document.getElementById('news_content').style.fontSize;
+		if (font_size == '') {
+			document.getElementById('news_content').style.fontSize = '20px';
+		}else{
+			font_size = parseInt(font_size) + 1;
+			font_size = font_size.toString();
+			document.getElementById('news_content').style.fontSize = font_size + 'px';
+		};
+		
+	};
+
+	function decrease_font_size(){
+		var font_size = document.getElementById('news_content').style.fontSize;
+		if (font_size == '') {
+			document.getElementById('news_content').style.fontSize = '11px';
+		}else{
+			font_size = parseInt(font_size) - 1;
+			font_size = font_size.toString();
+			document.getElementById('news_content').style.fontSize = font_size + 'px';
+		};
+		
+	};
+</script>
+</body>
+</html>

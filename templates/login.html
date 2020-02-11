@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>中研院假新聞實驗系統</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/reset.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/site.css')}}">
+  <link rel="icon" href="{{ url_for('static', filename='image/logo.png')}}" />
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/container.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/grid.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/header.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/image.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/menu.css')}}">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/divider.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/segment.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/form.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/input.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/button.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/list.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/message.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='components/icon.css')}}">
+
+  <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='components/form.js')}}"></script>
+  <script src="{{ url_for('static', filename='components/transition.js')}}"></script>
+
+  <style type="text/css">
+    
+    }
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+
+
+  </style>
+  <script>
+  $(document)
+    .ready(function() {
+      $('.ui.form')
+        .form({
+          fields: {
+            email: {
+              identifier  : 'email',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : '請輸入您的e-mail'
+                },
+                {
+                  type   : 'email',
+                  prompt : '請輸入e-mail'
+                }
+              ]
+            },
+            password: {
+              identifier  : 'password',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : '請輸入密碼'
+                },
+                {
+                  type   : 'length[6]',
+                  prompt : '密碼需長於6個字元'
+                }
+              ]
+            }
+          }
+        })
+      ;
+    })
+  ;
+</script>
+
+</head>
+<body id="dynamic-background">
+<div class="ui hidden divider"></div>
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui image header">
+        <img src="{{ url_for('static', filename='image/logo.png')}}" class="image">
+      <div class="content">
+        中研院假新聞實驗系統
+      </div>
+    </h2>
+    <form class="ui large form">
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="envelope outline icon"></i>
+            <input type="text" name="email" placeholder="E-mail address">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="ui fluid large black submit button">登入</div>
+      </div>
+
+      <div class="ui error message"></div>
+
+    </form>
+
+    <div class="ui message">
+     還未註冊帳號嗎？  <a href="/fakenews/sign_up">註冊</a>
+    </div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/three.r95.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/vanta.net.min.js')}}"></script>
+<script>
+VANTA.NET({
+  el: "#dynamic-background",
+  mouseControls: true,
+  touchControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xd0dae3,
+  backgroundColor: 0xffffff
+})
+</script>
+</body>
+
+</html>

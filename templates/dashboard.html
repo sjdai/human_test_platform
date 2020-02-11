@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no"
+    />
+    <link rel="icon" href="{{ url_for('static', filename='image/logo.png')}}" />
+    <meta
+      name="description"
+      content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI."
+    />
+    <meta name="keywords" content="Semantic-UI, Theme, Design, Template" />
+    <meta name="author" content="PPType" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>中研院假新聞辨認實驗</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      type="text/css"
+    />
+    <style type="text/css">
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: grayscale;
+      }
+
+      #sidebar {
+        position: fixed;
+        height: 100vh;
+        background-color: #f5f5f5;
+        padding-top: 68px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      #sidebar .ui.menu > a.item {
+        padding: 10px 20px;
+        line-height: 20px;
+        color: #337ab7;
+        border-radius: 0 !important;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      #sidebar .ui.menu > a.item.active {
+        background-color: #337ab7;
+        color: white;
+        border: none !important;
+      }
+
+      #sidebar .ui.menu > a.item:hover {
+        background-color: #eee;
+        color: #23527c;
+      }
+
+      #content {
+        padding-top: 56px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      #content h1 {
+        font-size: 36px;
+      }
+
+      #content .ui.dividing.header {
+        width: 100%;
+      }
+
+      .ui.centered.small.circular.image {
+        margin-top: 14px;
+        margin-bottom: 14px;
+      }
+
+      .ui.borderless.menu {
+        box-shadow: none;
+        flex-wrap: wrap;
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .ui.mobile.only.grid .ui.menu .ui.vertical.menu {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body id="root">
+    <div class="ui tablet computer only padded grid">
+      <div class="ui inverted borderless top fixed fluid menu">
+        <a class="header item">中研院假新聞辨認實驗</a>
+        <div class="ui dropdown icon item button">
+        <img class="ui right spaced avatar image" src="{{ url_for('static', filename='image/user.png')}}">
+        Elliot
+  </div>
+        <div class="right menu">
+          <a class="active red item right">登出</a>
+        </div>
+      </div>
+    </div>
+    <!-- mobile setting -->
+    <div class="ui mobile only padded grid">
+      <div class="ui top fixed borderless fluid inverted menu">
+        <a class="header item">中研院假新聞辨認實驗</a>
+        <div class="right menu">
+          <div class="item">
+            <button class="ui icon toggle basic inverted button">
+              <i class="content icon"></i>
+            </button>
+          </div>
+        </div>
+        <div class="ui vertical borderless inverted fluid menu">
+          <div class="ui dropdown icon item button">
+        <img class="ui right spaced avatar image" src="{{ url_for('static', filename='image/user.png')}}">
+        Elliot
+  </div>
+          <a class="item" href="/fakenews/dashboard">總覽</a> <a class="item" href="/fakenews/profile">個人檔案</a>
+          <a class="item">實驗說明</a> <a class="item">聯絡我們</a>
+          <div class="ui hidden divider"></div>
+          <a href="" class="item red">登出</a>
+        </div>
+      </div>
+    </div>
+    <div class="ui padded grid">
+      <div
+        class="three wide tablet only three wide computer only column"
+        id="sidebar"
+      >
+        <div class="ui vertical borderless fluid text menu">
+          <a class="item" href="/fakenews/dashboard">總覽</a>
+          <a class="item" href="/fakenews/profile">個人檔案</a>
+          <a class="item">實驗說明</a>
+          <a class="item" href="mailto:sjdai@iis.sinica.edu.tw">聯絡我們</a>
+        </div>
+      </div>
+      <div
+        class="sixteen wide mobile thirteen wide tablet thirteen wide computer right floated column"
+        id="content"
+      >
+        <div class="ui padded grid">
+          <div class="row">
+            <h1 class="ui huge dividing header">前往實驗</h1>
+          </div>
+          <div class="center aligned row">
+            <div class="eight wide mobile four wide tablet four wide computer column">
+              <h2><span style="border-bottom:3px #b8ea52 solid; padding-bottom:5px;">實驗一</span></h2>
+              <div class="ui centered small">
+                  <div>
+                  <b>已進行次數:</b> 3
+                </div>
+              </div>
+
+              <div class="ui hidden divider"></div>
+              <a class="ui secondary inverted button">前往實驗一</a>
+            </div>
+
+            <div class="eight wide mobile four wide tablet four wide computer column">
+              <h2><span style="border-bottom:3px #b8ea52 solid; padding-bottom:5px;">實驗二</span></h2>
+              <div class="ui centered small">
+                  <div>
+                  <b>已進行次數:</b> 0
+                </div>
+              </div>
+
+              <div class="ui hidden divider"></div>
+              <a class="ui secondary inverted button">前往實驗二</a>
+            </div>
+
+           <div class="eight wide mobile four wide tablet four wide computer column">
+              <h2><span style="border-bottom:3px #b8ea52 solid; padding-bottom:5px;">實驗三</span></h2>
+              <div class="ui centered small">
+                  <div>
+                  <b>已進行次數:</b> 1
+                </div>
+              </div>
+
+              <div class="ui hidden divider"></div>
+              <a class="ui secondary inverted button">前往實驗三</a>
+            </div>
+
+          </div>
+          <div class="ui hidden section divider"></div>
+          <div class="row">
+            <h1 class="ui huge dividing header">記錄</h1>
+          </div>
+          <div class="row">
+            <table class="ui very basic table">
+              <thead>
+                <tr>
+                  <th class="one wide"></th>
+                  <th class="nine wide">標題</th>
+                  <th class="three wide">閱讀時間</th>
+                  <th class="three wide">閱讀時長</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>氰化物可防武漢肺炎? 劇毒恐致死</td>
+                  <td>2020/02/10 10:57:34</td>
+                  <td>00:03:32</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>氰化物可防武漢肺炎? 劇毒恐致死</td>
+                  <td>2020/02/09 14:23:11</td>
+                  <td>00:01:12</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".ui.toggle.button").click(function() {
+          $(".mobile.only.grid .ui.vertical.menu").toggle(100);
+        });
+      });
+    </script>
+  </body>
+</html>
